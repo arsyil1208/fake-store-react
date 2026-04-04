@@ -7,7 +7,7 @@ import CategoryPrtoducts from "../pages/CategoryProducts";
 import { Login } from "../pages/Login";
 import Cart from "../pages/Cart";
 import { auth } from "../middleware/auth";
-import Checkout from "../pages/checkout";
+import Checkout from "../pages/Checkout";
 
 export const router = createBrowserRouter([
   {
