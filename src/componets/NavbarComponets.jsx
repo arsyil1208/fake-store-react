@@ -13,7 +13,7 @@
     NavbarLink,
     NavbarToggle,
   } from "flowbite-react";
-  import imgLogo from "../assets/LogoStore.jpg";
+  import imgLogo from "../assets/photos.png";
   import { Route, useNavigate } from "react-router-dom";
   import Products from "../pages/Products";
   import { Link } from "react-router-dom";

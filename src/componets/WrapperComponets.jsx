@@ -15,7 +15,7 @@ export default function WrapperComponets({ data, type, children }) {
     setSelectedItem(item);
   }
   return (
-    <div className="w-7xl block mx-auto">
+    <div className="w-5xl block mx-auto">
       {children}
       <div className="grid grid-cols-4 gap-4 my-15">
         {data.map((item, index) =>
