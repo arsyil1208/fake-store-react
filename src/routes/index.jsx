@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import App from "../App";
 import Products from "../pages/Products";
 import Templates from "../Tempaltes";
@@ -9,38 +9,41 @@ import Cart from "../pages/Cart";
 import { auth } from "../middleware/auth";
 import Checkout from "../pages/Checkout";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
-    // membukus outlet
     path: "/",
     element: <Templates />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <App />,
       },
       {
-        path: "/Products",
+        path: "Products",
         element: <Products />,
       },
       {
-        path: "/User",
+        path: "User",
         element: <Profil />,
       },
       {
-        path: "/products/category/:categoryId",
+        path: "products/category/:categoryId",
         element: <CategoryPrtoducts />,
       },
-      { path: "/login", element: <Login /> },
-    ],
-  },
-  {
-    path: "/",
-    element: <Templates />,
-    loader: auth, //middleware
-    children: [
-      { path: "/cart", element: <Cart /> },
-      { path: "/checkout", element: <Checkout />}
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+        loader: auth,
+      },
+      {
+        path: "checkout",
+        element: <Checkout />,
+        loader: auth,
+      },
     ],
   },
 ]);

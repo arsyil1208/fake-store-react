@@ -14,8 +14,7 @@
     NavbarToggle,
   } from "flowbite-react";
   import imgLogo from "../assets/photos.png";
-  import { Route, useNavigate } from "react-router-dom";
-  import Products from "../pages/Products";
+  import { useNavigate } from "react-router-dom";
   import { Link } from "react-router-dom";
   import { useState, useEffect, useContext } from "react";
   import { Spinner } from "flowbite-react";
